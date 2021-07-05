@@ -88,9 +88,9 @@ class VRNN(nn.Module):
         return dec_means, hs
 
 
-class VRNNlm(nn.Module):
+class CatVRNN(nn.Module):
     def __init__(self, vocab_size, k, x_dim, h_dim, z_dim, mode, init_h, device='cpu'):
-        super(VRNNlm, self).__init__()
+        super(CatVRNN, self).__init__()
         self.h_dim = h_dim
         self.device = device
         self.mode = mode

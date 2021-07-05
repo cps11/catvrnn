@@ -1,5 +1,5 @@
 import torch
-from vrnn import VRNNlm
+from catvrnn import CatVRNN
 import dataset
 import os
 import argparse
@@ -52,7 +52,7 @@ if __name__ == '__main__':
     k = len(set(labels))
 
     device = torch.device("cuda:{}".format(args.d) if torch.cuda.is_available() else "cpu")
-    model = VRNNlm(vocab_size, k, x_dim, h_dim, z_dim, 'g', tag, device)
+    model = CatVRNN(vocab_size, k, x_dim, h_dim, z_dim, 'g', tag, device)
     model.load_state_dict(torch.load(args.m))
     model.to(device)
     model.eval()

@@ -1,6 +1,6 @@
 import torch.optim as optim
 import torch
-from vrnn import VRNNlm
+from catvrnn import CatVRNN
 import dataset
 from tqdm import tqdm
 import pickle
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     
     torch.autograd.set_detect_anomaly(True)
     device = torch.device("cuda:{}".format(gid) if torch.cuda.is_available() else "cpu")
-    model = VRNNlm(vocab_size, k, x_dim, h_dim, z_dim, args.tm, args.f, device)
+    model = CatVRNN(vocab_size, k, x_dim, h_dim, z_dim, args.tm, args.f, device)
     model.to(device)
     model.train()
  
