@@ -9,7 +9,8 @@ This is the main code of the paper "[CatVRNN: Generating Category Texts via Mult
 > * Python 3.7.9
 
 ## Reference
-> @article{cheng2021catvrnn,
+```
+@article{cheng2021catvrnn,
       title={CatVRNN: Generating Category Texts via Multi-task Learning}, 
       author={Pengsen Cheng and Jiayong Liu and Jinqiao Dai},
       year={2021},
@@ -17,3 +18,4 @@ This is the main code of the paper "[CatVRNN: Generating Category Texts via Mult
       archivePrefix={arXiv},
       primaryClass={cs.CL}
 }
+```
